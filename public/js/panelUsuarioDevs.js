@@ -1,0 +1,1 @@
+//acciones de seleccion o cambio en el modo y apagar y prender 

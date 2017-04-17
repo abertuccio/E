@@ -1,0 +1,74 @@
+<!-- Modal Aceptacion -->
+<div id="aceptacion" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Agregar Dispositivos</h4>
+            </div>
+            <div class="modal-body">
+                <p>Antes de comenzar a buscar los dispositivos es necesario que lea esta guia de instalación. Si ya lo hizo, haga click en iniciar y se escaneará la red local en búsqueda de dispositivos aún no asociados.</p> 
+                <p>Recuerde que <b>este proceso debe hacerse en la misma red local</b> que en la que se encuentra el dispositivo que se quiere asociar.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default busquedaDevLocal" data-dismiss="modal" data-toggle="modal" data-target="#proceso">Iniciar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Fin Modal Aceptacion -->
+
+<!-- Modal Proceso -->
+<div id="proceso" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Proceso de escaneo</h4>
+            </div>
+            <div class="modal-body">
+                <p>Se estan buscando dispositivos pendientes. El proceso completo pude durar mas de dos horas, no se desconecte de la red ni cierre el navegador.</p>
+                <p>Los dispositivos se iran asociando a medida que se encuentren, si ya se encontraron los que buscaba, puede cancelar el proceso sin problemas. 
+                </p>
+                <p id="intentoIp"></p>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+                        0%
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default cancelarBusqueda" data-dismiss="modal">Cancelar</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Fin Proceso -->
+
+<!-- Modal Cambio de protocolo -->
+<div id="cambioProtocolo" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Debemos realizar un cambio de protocolo</h4>
+            </div>
+            <div class="modal-body">
+                <p>No es posible realizar el escaneo con el protocolo https, cambiaremos al protocolo http.</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default cambioProtocoloAceptado" data-dismiss="modal">Realizar el cambio</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Fin Cambio de protocolo -->

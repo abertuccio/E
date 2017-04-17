@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+}
+
+a {
+  color: #00B7FF;
+}
+
+.navbar-wrapper .navbar {
+  border-radius: 4px;
+}
+
+.logoMenu {
+  float: right;
+  margin-top: 3px;
+}
+
+.navbar-wrapper .navbar .container {
+  width: auto;
+}

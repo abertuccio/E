@@ -1,0 +1,36 @@
+<div class="row devRow">
+    <div class="col-xs-12 col-ld-9 dev devOff">
+        <div class="devText"  contentEditable="true"git ><%- dispositivoDeUsuario.idConfiguracionDev %></div>
+        <input class="devEstado" type="checkbox" name="my-checkbox">
+    </div>
+</div>
+<div class="espec">
+    <div class="row especConf-1">
+        <div class="col-xs-4">
+            <div class="form-group">
+                <select class="form-control" id="sel1">
+                    <% configuracionesPosibles.forEach(function(configuracionPosible){ %>
+                    <option  <% if(configuracionPosible._id == dispositivoDeUsuario.idConfiguracionDev)
+                    {%>
+                        selected="selected"
+                    <%}
+                    %> >
+                            <%- configuracionPosible.descripcion %>
+                    </option>
+                        <% }); %>
+                </select>
+            </div>
+            <div class="alert alert-info" role="alert">
+              <% 
+              configuracionesPosibles.forEach(function(configuracionPosible){
+              if(configuracionPosible._id == dispositivoDeUsuario.idConfiguracionDev)
+                    {%> 
+              <%- configuracionPosible.descripcionLarga %>        
+                     <% }}); %>
+            </div>
+        </div>
+        <div class="col-xs-8">
+            <button type="submit" class="btn btn-default">Aplicar cambios</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include head.html %>
+        <link href="static/css/bootstrap-switch.min.css" rel="stylesheet">
+        <link href="static/css/panelUsuarios.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar-wrapper">
+        <div class="container">
+            <% include menu.html %>
+
+                <div class="row mainContainer">
+                    <div class="col-md-9 devContainer">
+                        <% dispositivosDelUsuario.forEach(function(dispositivoDeUsuario){ %>
+                            <%- include( 'dev.html', {dispositivoDeUsuario: dispositivoDeUsuario,configuracionesPosibles:configuracionesPosibles}); %>
+                        <% }); %>
+
+                    </div>
+                    <div class="col-md-3" style="text-align: center;">
+                        <button type="button" class="btn btn-lg btn-default nuevosDispositivos" data-toggle="modal" data-target="#aceptacion">Agregar nuevos dispositivos</button>
+                        <button type="button" class="btn btn-xs btn-link">Cómo agregar nuevos dispositivos?</button>
+                        <button type="button" class="btn btn-xs btn-link">Cuales son los estados disponibles?</button>
+                    </div>
+                </div>
+
+
+
+        </div>
+    </div>
+    
+    <% include agregarDispositivoModal.html %>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap-switch.min.js"></script>
+    <script src="static/js/panelUsuarioDevs.js"></script>
+    <script src="static/js/panelUsuarioMec.js"></script>
+    <script src="static/js/panelUsuarioNuevoDev.js"></script>
+</body>
+
+</html>
